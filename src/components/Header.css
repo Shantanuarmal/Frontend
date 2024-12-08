@@ -1,0 +1,234 @@
+/* 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+ 
+  .navbar {
+    width: 100%;
+    height: 100vh; 
+    background: url("../assets/homepage.jpg") no-repeat center center/cover; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+  }
+  
+
+  .navbar nav {
+    position: absolute;
+    top: 30px;
+    right: 20px; 
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+  }
+  
+  .navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar nav a:hover {
+    background-color: rgba(255, 215, 0, 0.8); 
+    color: black;
+  }
+  
+
+  .logo {
+    left: 2px;
+    top: 10px;
+    font-size: 4rem;
+    position: fixed;
+  
+    font-weight: bold;
+    text-transform: uppercase;
+    color: gold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+  }
+  
+ 
+  .navbar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
+  }
+   */
+
+
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Header Styling */
+  .navbar {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('../assets/homepage.jpg') no-repeat center center/cover; /* Full-page background image */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    animation: fadeInLogo 1.5s ease-in-out;
+  }
+  
+  /* Navbar Links */
+  nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover Effect for Nav Links */
+  nav a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    transition: all 0.4s ease;
+  }
+  
+  nav a:hover::before {
+    left: 100%;
+  }
+  
+  nav a:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Info Section Styling */
+  .info {
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    animation: fadeInInfo 2s ease-in-out;
+  }
+  
+  .info h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: 3px 3px 8px rgba(147, 0, 105, 0.253);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #f3eeed, #fcf8f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .info button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+  }
+  
+  .info button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Animations */
+  @keyframes fadeInLogo {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInInfo {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .info h1 {
+      font-size: 40px;
+    }
+  
+    nav a {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .info button {
+      font-size: 16px;
+      padding: 12px 30px;
+    }
+  }
+  

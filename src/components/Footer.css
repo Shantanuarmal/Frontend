@@ -1,0 +1,103 @@
+/* Footer Container */
+.footer {
+    background-color: #1c2833;
+    color: white;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Form Section */
+  .footer-contact h3 {
+    color: #f1c40f; /* Golden color */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .contact-form button {
+    background-color: #f1c40f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Contact Information Section */
+  .footer-info p {
+    margin: 10px 0;
+  }
+  
+  .phone-icon {
+    margin-right: 10px;
+  }
+  
+  .social-icon {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #f1c40f;
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    background-color: #17202a;
+    padding: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 10px 0;
+  }
+  
+  .footer-bottom a {
+    color: #f1c40f;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-contact,
+    .footer-info {
+      min-width: 100%;
+    }
+  }
+  

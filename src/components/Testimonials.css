@@ -1,0 +1,127 @@
+/* Testimonials Section */
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #1c1c1c; /* Dark background */
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  /* Section Title */
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f1c40f; /* Golden color */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Testimonial Slider */
+  .testimonial-slider {
+    display: flex;
+    transition: transform 100s ease-in-out; 
+    animation: slide 60s infinite linear; /* Sliding animation */
+  }
+  
+  /* Individual Testimonial Slide */
+  .testimonial-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Testimonial Content */
+  .testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Dark background for each slide */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 80%;
+    text-align: left;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Testimonial Hover Effect */
+  .testimonial:hover {
+    transform: translateY(-10px); /* Hover effect */
+  }
+  
+  /* Client Image */
+  .client-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 3px solid #f1c40f; /* Golden border for image */
+    transition: border 0.3s ease;
+  }
+  
+  .client-img:hover {
+    border-color: #e74c3c; /* Red border on hover */
+  }
+  
+  /* Testimonial Text */
+  .testimonial-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ccc; /* Light gray text */
+  }
+  
+  .testimonial-content p:first-child {
+    font-style: italic;
+    color: #f1c40f; /* Golden color for the quote */
+  }
+  
+  .testimonial-content p:last-child {
+    font-weight: bold;
+    color: #e74c3c; /* Red color for client name */
+  }
+  
+  /* Animation for Sliding Effect */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .testimonial-slider {
+      flex-direction: column;
+    }
+  
+    .testimonial {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .client-img {
+      margin-bottom: 20px;
+    }
+  
+    .testimonials-section {
+      padding: 30px 15px;
+    }
+  }
+  
